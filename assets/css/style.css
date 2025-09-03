@@ -1,0 +1,133 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bold;
+	background: url('../img/bg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/* Sabit Menü Stilleri */
+.fixed-menu {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 999;
+	display: flex;
+	flex-direction: column;
+	gap: 15px; /* Menü öğeleri arasındaki boşluk */
+	text-align: center;
+}
+
+.fixed-menu ul {
+  list-style-type: none;
+}
+
+.left-menu {
+	left: calc(2% - 80px); 
+}
+
+.right-menu {
+	right: 2%;
+        top: 85%;
+}
+
+.fixed-menu a {
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.fixed-menu a:hover {
+	transform: scale(1.1);
+}
+
+.fixed-menu img {
+	width: auto;
+	max-width: 100%;
+}
+
+
+/* Ana İçerik ve Resim Galerisi Stilleri */
+.main-content-wrapper {
+    text-align: center;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20%; /* Resimler arasındaki %20 boşluk */
+}
+
+.gallery-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Medya Sorguları - Butonların Büyüyüp Küçülürken Kaymamasını Sağlar */
+@media (max-width: 1365px) {
+    .m-d-n {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1366px) {
+    .f-d-n {
+        display: none !important;
+    }
+}
+
+/* Mobil Alt Menü */
+.mobil_menu {
+    background: rgba(0, 0, 0, 0.61);
+    width: 100%;
+    max-width: 100%;
+    z-index: 9;
+    position: fixed;
+    bottom: 0px;
+}
+
+.mobil_menu ul {
+    width: 100%;
+    list-style: none;
+    margin: 0 !important;
+    padding: 10px 20px !important;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mobil_menu ul li {
+    width: 50%;
+    text-align: center;
+}
+
+
+
+.discord-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #7289da !important;
+    color: #ffffff !important;
+    padding: 12px 25px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    transition: background-color 0.3s, transform 0.3s !important;
+    margin: 25px 35px !important;
+}
+
+.discord-button:hover {
+    background-color: #677bc4 !important;
+    transform: translateY(-2px) !important;
+}
+
+.discord-button img {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 12px !important;
+}
